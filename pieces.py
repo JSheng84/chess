@@ -8,7 +8,7 @@ class Piece(ABC):
         self.y = y
 
     def check_name(self, name):
-        piece_list =['pawn', 'bishop', 'rook', 'knight', 'queen', 'king']
+        piece_list =['pawn', 'bishop', 'rook', 'horse', 'queen', 'king']
         if (name in piece_list):
             return name
         else:
@@ -40,3 +40,7 @@ class Queen(Piece):
 class King(Piece):
     def move(self):
         print("I can move anywhere one space")
+
+class Horse(Piece):
+    def move(self):
+        print("I can move only in an L shape")
